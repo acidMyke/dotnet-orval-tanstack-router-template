@@ -1,0 +1,6 @@
+@DotnetOrvalTemplate.Api_HostAddress = http://localhost:5140
+
+GET {{DotnetOrvalTemplate.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
