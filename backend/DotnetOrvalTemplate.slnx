@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DotnetOrvalTemplate.Api/DotnetOrvalTemplate.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DotnetOrvalTemplate.Api.Tests/DotnetOrvalTemplate.Api.Tests.csproj" />
+  </Folder>
+</Solution>
