@@ -1,9 +1,46 @@
 @import 'tailwindcss';
+@plugin 'daisyui' {
+  themes: false;
+}
+@plugin 'daisyui/theme' {
+  name: 'catppuccin';
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #1e1e2e;
+  --color-base-200: #181825;
+  --color-base-300: #11111b;
+  --color-base-content: #cdd6f4;
+  --color-primary: #89b4fa;
+  --color-primary-content: #11111b;
+  --color-secondary: #cba6f7;
+  --color-secondary-content: #11111b;
+  --color-accent: #94e2d5;
+  --color-accent-content: #11111b;
+  --color-neutral: #313244;
+  --color-neutral-content: #cdd6f4;
+  --color-info: #74c7ec;
+  --color-info-content: #11111b;
+  --color-success: #a6e3a1;
+  --color-success-content: #11111b;
+  --color-warning: #f9e2af;
+  --color-warning-content: #11111b;
+  --color-error: #f38ba8;
+  --color-error-content: #11111b;
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+}
+
+:root {
+  color-scheme: dark;
+}
 
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, sans-serif;
-  background-color: #f8fafc;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 * {
