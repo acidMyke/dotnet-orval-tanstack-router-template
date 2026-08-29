@@ -20,7 +20,10 @@ function AuthForm({ mode, onSuccess }: { mode: Mode; onSuccess: (payload: AuthPa
     defaultValues: {
       username: '',
       password: '',
+      bio: '',
+      timezone: '',
       rememberSession: true,
+      receiveProductUpdates: false,
       sessionScope: 'standard',
     },
     onSubmit: async ({ value }) => {
@@ -101,6 +104,47 @@ function AuthForm({ mode, onSuccess }: { mode: Mode; onSuccess: (payload: AuthPa
             <field.CheckboxField
               description="Keep this session active on this browser"
               label="Remember session"
+            />
+          )}
+        </form.AppField>
+
+        <form.AppField name="receiveProductUpdates">
+          {(field) => (
+            <field.SwitchField
+              description="Receive release notes and product updates"
+              label="Email updates"
+            />
+          )}
+        </form.AppField>
+
+        <form.AppField
+          name="timezone"
+          validators={{
+            onBlur: ({ value }) => (value ? undefined : 'Select a timezone.'),
+          }}
+        >
+          {(field) => (
+            <field.SelectField
+              description="Common profile field for most applications"
+              label="Timezone"
+              options={[
+                { label: 'UTC', value: 'utc' },
+                { label: 'US Eastern (ET)', value: 'us-eastern' },
+                { label: 'US Pacific (PT)', value: 'us-pacific' },
+                { label: 'Central Europe (CET)', value: 'cet' },
+              ]}
+              placeholder="Choose your timezone"
+            />
+          )}
+        </form.AppField>
+
+        <form.AppField name="bio">
+          {(field) => (
+            <field.TextAreaField
+              description="Optional profile summary"
+              label="Bio"
+              placeholder="Tell us about yourself"
+              rows={3}
             />
           )}
         </form.AppField>
