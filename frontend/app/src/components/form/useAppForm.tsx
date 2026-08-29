@@ -152,5 +152,6 @@ export const { useAppForm } = createFormHook({
     TextInputField,
   },
   fieldContext,
+  formComponents: {},
   formContext,
 })
